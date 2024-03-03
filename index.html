@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+</head>
+<body>
+    <main>
+        <section class="cifrar">
+            <label for="entrada">Texto a encriptar: </label>
+            <textarea name="entrada" id="entrada-cifrar" cols="30" rows="10" placeholder="Tu texto a encriptar"></textarea>
+            <button id="btn-cifrar" type="submit">Cifrar</button>
+            <button id="btn-copiar">Copiar al portapapeles</button>
+        </section>
+
+        <section>
+            <textarea name="texto-descifrado" id="entrada-descifrar" cols="30" rows="10" disabled readonly></textarea>
+            <button id="btn-descifrar" type="submit">Descifrar</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Cuautle Delgadillo Luis Isaac&#169; <script>document.write(new Date().getFullYear());</script></p>
+    </footer>
+</body>
+<script src="index.js"></script>
+</html>
