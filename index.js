@@ -37,7 +37,7 @@ const cifrarEntrada = (entrada = '') => {
                 cifrado.push('ai');
             break;
             case 'o':
-                cifrado.push('orber'); 
+                cifrado.push('ober'); 
             break;
             case 'u':
                 cifrado.push('ufat'); 
@@ -55,35 +55,44 @@ const cifrarEntrada = (entrada = '') => {
 
 // Decrifra el texto
 const descifrarEntrada = (entrada = '') => {
-    let descrifrado = [];
+    let regex = new RegExp(/\b\w+/g);
+    let descifrado = entrada.match(regex);
+    let  temporal = "";
     
+    let j=0;
     
-    for(i in entrada){
-
-        if(entrada[i].match(' ')){
-            descrifrado.push(' ');
-
-            if (entrada.matchAll('enter')) {
-                // switch (entrada.match(entrada[])) {
-                //     case 'enter':
-                //         descrifrado.push('e');
-                //     break;
-                
-                //     default:
-                //         descrifrado.push(entrada[i]);
-                //     break;
-                // }
-                descrifrado.push('e');
-                continue;
-            }
-            continue;
+    console.log(descifrado.length);
+    // while(j < entrada.length-(descifrado.length)){
+        // console.log(descifrado[j]);
+        for(i in descifrado){
+            temporal += descifrado[i]
+            temporal = (temporal.replace('ober','o'));
+            temporal = (temporal.replace('ai','a'));
+            temporal = (temporal.replace('imes','i'));
+            temporal = (temporal.replace('enter','e'));
+            temporal = (temporal.replace('ufat','u'));
+            temporal += " ";  
         }
 
-        
-    }
+        console.log(temporal);
+    //     ++j; 
+    // }
 
-    console.log(descrifrado.join(''));
-    return;
+    // let resultado = temporal.split(" ");
+    // console.log(descifrado.length+(descifrado.length+1))
+    // if(descifrado.length >= 2){
+    //     for(let i=0; i<descifrado.length; ++i){
+    //         resultado.pop();
+    //     }
+    // }else{
+    //     for(let i=0; i<descifrado.length; ++i){
+    //         resultado.pop();
+    //     } 
+    // }
+    
+    
+    // console.log(resultado.length); 
+    return temporal;
 }
 
 
