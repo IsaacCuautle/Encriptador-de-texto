@@ -3,27 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
 <body>
+
     <main>
+
+        <img class="logo" src="./alura-logo.svg" alt="logo-de-alura">
+
         <section class="cifrar">
             <label for="entrada">Texto a encriptar: </label>
-            <textarea name="entrada" id="entrada-cifrar" cols="30" rows="10" placeholder="Tu texto a encriptar"></textarea>
-            <button id="btn-cifrar" type="submit">Cifrar</button>
-            <button id="btn-descifrar" type="submit">Descifrar</button>
+            <textarea name="entrada" id="entrada-cifrar" cols="30" rows="10"  placeholder="Tu texto a encriptar"></textarea>
+            <div class="botones">
+                <button class="boton" id="btn-cifrar" type="submit">Cifrar</button>
+                <button class="boton" id="btn-descifrar" type="submit">Descifrar</button>
+            </div>
         </section>
 
-        <section>
+        <section class="salida">
             <label for="salida"></label>
             <textarea name="salida" id="entrada-descifrar" cols="30" rows="10" disabled readonly></textarea>
-            <button id="btn-copiar">Copiar al portapapeles</button>
+            <button class="boton" id="btn-copiar">Copiar al portapapeles</button>
         </section>
     </main>
 
-    <footer>
-        <p>Cuautle Delgadillo Luis Isaac&#169; <script>document.write(new Date().getFullYear());</script></p>
-    </footer>
+    <section>
+        <footer>
+            <p>Cuautle Delgadillo Luis Isaac&#169; <script>document.write(new Date().getFullYear());</script></p>
+        </footer>
+    </section>
 </body>
 <script src="index.js"></script>
 </html>

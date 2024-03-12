@@ -62,8 +62,7 @@ const descifrarEntrada = (entrada = '') => {
     let j=0;
     
     console.log(descifrado.length);
-    // while(j < entrada.length-(descifrado.length)){
-        // console.log(descifrado[j]);
+    
         for(i in descifrado){
             temporal += descifrado[i]
             temporal = (temporal.replace('ober','o'));
@@ -75,23 +74,7 @@ const descifrarEntrada = (entrada = '') => {
         }
 
         console.log(temporal);
-    //     ++j; 
-    // }
 
-    // let resultado = temporal.split(" ");
-    // console.log(descifrado.length+(descifrado.length+1))
-    // if(descifrado.length >= 2){
-    //     for(let i=0; i<descifrado.length; ++i){
-    //         resultado.pop();
-    //     }
-    // }else{
-    //     for(let i=0; i<descifrado.length; ++i){
-    //         resultado.pop();
-    //     } 
-    // }
-    
-    
-    // console.log(resultado.length); 
     return temporal;
 }
 
