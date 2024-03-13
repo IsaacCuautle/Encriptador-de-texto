@@ -4,13 +4,13 @@
     --dark-blue-300: #0A3871;
     --dark-blue-400: #072B61;
     --dark-blue500: #052051;
-    
+
     --light-blue-100: #F3F5FC;
     --light-blue-200: #EFF1FA;
     --light-blue-300: #E9ECF8;
     --light-blue-400: #AAB2D5;
     --light-blue-500: #757FB2;
-    
+
     --gris-100: #CED4DA;
     --gris-200: #ADB5BD;
     --gris-300: #868E96;
@@ -18,13 +18,14 @@
     --gris-500: #343A40;
 }
 
-body{
+html{
     font-size: 1.5em;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
         "slnt" 0;
+    background-color: #E9ECF8;
 }
 
 p{
@@ -42,8 +43,8 @@ textarea{
 }
 
 .logo{
-    width: 2.5%;
-    margin: 0 2em;
+    width: 2%;
+    margin: 0 1em;
 }
 
 .cifrar{
@@ -51,8 +52,8 @@ textarea{
     flex-direction: column;
     width: 60%;
     height: 75%;
-    border-style: solid;
-    border-width: .1em;
+    /* border-style: solid; */
+    /* border-width: .1em; */
     top: 3em;
 }
 
@@ -66,16 +67,33 @@ textarea{
 .boton{
     margin: 1em 6em;
     width: 100%;
-    padding: .3em;
+}
+
+.cifrar .boton{
+    border-radius: 1em;
+    padding: 1% 3%;
+    border-style: none;
+    color: #CED4DA;
+    font-size: 20px;
+    background-color: #052051;
+}
+
+.cifrar .boton-desencriptar{
+   background-color: #AAB2D5; 
+   color: #052051;
 }
 
 #entrada-cifrar {
-    resize: none; /*remove the resize handle on the bottom right*/
-    width: 80%;
-    height: 6em;
+    resize: none;
+    width: 95%;
+    margin: 0 auto;
+    padding: 10% 0%;
     font-size: 1em;
+    font-weight: bold;
+    color: #072B61;
     text-align: center;
-    margin-bottom: 35%;
+    background-color: #E9ECF8;
+    margin-bottom: 2.4%;
 }
 
 #entrada-cifrar::placeholder{
@@ -84,8 +102,9 @@ textarea{
 
 #entrada-cifrar:focus{
     border: none;
-    color: var(--dark-blue500);
-    
+    color: var(--dark-blue-400);
+    text-align: center;
+
 }
 
 .salida{
@@ -94,21 +113,64 @@ textarea{
     flex-direction: column;
     width: 30%;
     right: 3em;
-    height: 72%;
+    height: 68%;
     top: 2.8em;
-    border-style: solid;
+    background-color: white;
+    /* border-style: solid; */
+    border-radius: .5em;
     border-width: .1em;
+    align-items: center;
 }
 
-#entrada-descifrar{
-    margin-bottom: 75%;
+.muneco{
+    position: absolute;
+}
 
+
+.img-muneco{
+    position: relative;
+    top: 3em;
+    height: 50%;
+}
+
+.muneco p{
+    bottom: 1em;
+    margin: 0 2em;
+}
+
+
+.salida .boton {    
+    display: none;
+    width: 75%;
+    padding: 3%;
+    border-radius: 1em;
+    border-style: none;
+    color: #CED4DA;
+    background-color: #052051;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+#entrada-descifrar{
+    resize: none; /*remove the resize handle on the bottom right*/
+    width: 95%;
+    /* height: 40%; */
+    padding: 40% 0;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 6%;
+    /* border-style: solid;  */
+}
+
+#entrada-descifrar::placeholder{
+    color: var(--dark-blue500);
 }
 
 footer{
     display: block;
-    font-size: .8em;
-    margin: 2em 0;
+    font-size: .6em;
+    margin: 6em 0 0;
     text-align: center;
-    width: 100%;  
+    width: 100%;
+    height: 50%;
 }

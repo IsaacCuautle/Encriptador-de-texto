@@ -19,6 +19,7 @@ const validacion = () => {
 // Cifrar texto
 const cifrarEntrada = (entrada = '') => {
     let cifrado = [];
+    btnCopiar.style.display = "block"
     for (let i in entrada) {
      
         if(entrada[i] === ' '){
@@ -55,6 +56,7 @@ const cifrarEntrada = (entrada = '') => {
 
 // Decrifra el texto
 const descifrarEntrada = (entrada = '') => {
+    btnCopiar.style.display = "block"
     let regex = new RegExp(/\b\w+/g);
     let descifrado = entrada.match(regex);
     let  temporal = "";
@@ -62,9 +64,14 @@ const descifrarEntrada = (entrada = '') => {
     let j=0;
     
     console.log(descifrado.length);
-    
-        for(i in descifrado){
+
+        for(let i= 0; i<=descifrado.length-1; i++){
             temporal += descifrado[i]
+            temporal = (temporal.replace('ober','o'));
+            temporal = (temporal.replace('ai','a'));
+            temporal = (temporal.replace('imes','i'));
+            temporal = (temporal.replace('enter','e'));
+            temporal = (temporal.replace('ufat','u'));
             temporal = (temporal.replace('ober','o'));
             temporal = (temporal.replace('ai','a'));
             temporal = (temporal.replace('imes','i'));
@@ -81,6 +88,7 @@ const descifrarEntrada = (entrada = '') => {
 
 // Copiar texto al porta papeles
 const copiarPortapapeles = async() => {
+    
     let resultado = document.getElementById('entrada-descifrar').innerHTML;
     try {
         await navigator.clipboard.writeText(resultado);
@@ -98,6 +106,7 @@ btnCifrar.addEventListener('click',() =>{
 btnDescifrar.addEventListener('click',() =>{
     salida.innerHTML = descifrarEntrada(validacion());
 });
+
 
 btnCopiar.addEventListener('click',() =>{
     copiarPortapapeles();    
