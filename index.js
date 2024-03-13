@@ -3,7 +3,7 @@ let salida = document.getElementById('entrada-descifrar');
 let btnCifrar = document.getElementById('btn-cifrar');
 let btnDescifrar = document.getElementById('btn-descifrar');
 let btnCopiar = document.getElementById('btn-copiar');
-
+let muneco = document.getElementById('muneco');
 
 // Validar entrada
 const validacion = () => {
@@ -12,14 +12,16 @@ const validacion = () => {
     return !regexp.test(input) ? 
         alert('Tu entrada no debe contener mayusculas ni Caracteres especiales') :  
             input; 
-    
 };
 
 
 // Cifrar texto
 const cifrarEntrada = (entrada = '') => {
+    
+    btnCopiar.style.display = "block";
+    muneco.style.display = "none";
+
     let cifrado = [];
-    btnCopiar.style.display = "block"
     for (let i in entrada) {
      
         if(entrada[i] === ' '){
@@ -56,12 +58,12 @@ const cifrarEntrada = (entrada = '') => {
 
 // Decrifra el texto
 const descifrarEntrada = (entrada = '') => {
-    btnCopiar.style.display = "block"
+    
+    btnCopiar.style.display = "block";
+    muneco.style.display = "none";
     let regex = new RegExp(/\b\w+/g);
     let descifrado = entrada.match(regex);
     let  temporal = "";
-    
-    let j=0;
     
     console.log(descifrado.length);
 

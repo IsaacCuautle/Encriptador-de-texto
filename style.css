@@ -134,7 +134,8 @@ textarea{
 }
 
 .muneco p{
-    bottom: 1em;
+    position: absolute;
+    bottom: -30%;
     margin: 0 2em;
 }
 
