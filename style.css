@@ -64,9 +64,23 @@ textarea{
     width: 100%;
 }
 
+.botones i{
+    position: absolute;
+    font-size: .5em;
+    left: 9em;
+    width: 20%;
+    color: #495057;
+}
+
 .boton{
     margin: 1em 6em;
     width: 100%;
+    transition: 500ms;
+}
+
+.boton:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+
 }
 
 .cifrar .boton{
@@ -78,8 +92,9 @@ textarea{
     background-color: #052051;
 }
 
+
 .cifrar .boton-desencriptar{
-   background-color: #AAB2D5; 
+   background-color: #CED4DA; 
    color: #052051;
 }
 
@@ -91,7 +106,7 @@ textarea{
     font-size: 1em;
     font-weight: bold;
     color: #072B61;
-    text-align: center;
+    text-align: left;
     background-color: #E9ECF8;
     margin-bottom: 2.4%;
 }
@@ -103,7 +118,7 @@ textarea{
 #entrada-cifrar:focus{
     border: none;
     color: var(--dark-blue-400);
-    text-align: center;
+    text-align: left;
 
 }
 
@@ -115,11 +130,13 @@ textarea{
     right: 3em;
     height: 68%;
     top: 2.8em;
-    background-color: white;
-    /* border-style: solid; */
+    background-color: #F3F5FC;
     border-radius: .5em;
     border-width: .1em;
     align-items: center;
+    -webkit-box-shadow: -3px 4px 30px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -3px 4px 30px -8px rgba(0,0,0,0.75);
+    box-shadow: -3px 4px 30px -8px rgba(0,0,0,0.75);
 }
 
 .muneco{
@@ -129,14 +146,25 @@ textarea{
 
 .img-muneco{
     position: relative;
-    top: 3em;
+    top: 1em;
     height: 50%;
 }
 
 .muneco p{
     position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
     bottom: -30%;
     margin: 0 2em;
+}
+
+.muneco p:last-of-type{
+    position: absolute;
+    bottom: -9em;
+    color: #868E96;
+    font-size: .6rem;
+    font-weight: 500;
 }
 
 
@@ -146,8 +174,8 @@ textarea{
     padding: 3%;
     border-radius: 1em;
     border-style: none;
-    color: #CED4DA;
-    background-color: #052051;
+    background-color: #CED4DA; 
+   color: #052051;
     font-family: "Inter", sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -155,7 +183,7 @@ textarea{
 #entrada-descifrar{
     resize: none; /*remove the resize handle on the bottom right*/
     width: 95%;
-    /* height: 40%; */
+    background-color: #F3F5FC;
     padding: 40% 0;
     font-size: 1em;
     text-align: center;
@@ -174,4 +202,29 @@ footer{
     text-align: center;
     width: 100%;
     height: 50%;
+}
+
+
+@media (max-width: 940px) {
+    .logo{
+        position: relative;
+        width: 1.2em;
+        margin: .1em;
+    }
+
+    .cifrar{
+        position: absolute;
+        margin: 0 auto;
+        width: 90%;
+        height: 30%;
+        border-style: dashed;
+    }
+
+    .muneco{
+        position: fixed;
+    }
+
+    .muneco .img-muneco{
+        display: none;
+    }
 }

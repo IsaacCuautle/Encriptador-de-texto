@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Encriptador</title>
 </head>
 <body>
@@ -18,6 +19,7 @@
         <section class="cifrar">
             <textarea name="entrada" id="entrada-cifrar" cols="30" rows="10"  placeholder="Ingrese el texto aqui."></textarea>
             <div class="botones">
+                <i class="fa fa-info-circle"> Solo minusculas y sin caracteres especiales</i>
                 <button class="boton" id="btn-cifrar" type="submit">Cifrar</button>
                 <button class="boton boton-desencriptar" id="btn-descifrar" type="submit">Descifrar</button>
             </div>
@@ -28,7 +30,8 @@
 
             <div id="muneco" class="muneco">
                 <img  class="img-muneco" src="./muñeco.svg" alt="muñeco">
-                <p>Sin mensajes aun...</p>
+                <p>Ningun mensaje fue encontrado</p>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
             </div>
             <textarea name="salida" id="entrada-descifrar" cols="30" rows="10"   readonly></textarea>
             <button class="boton" id="btn-copiar">Copiar al portapapeles</button>
