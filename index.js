@@ -10,7 +10,7 @@ const validacion = () => {
     let regexp = new RegExp(/^([a-z0-9]+)(\s[a-z0-9]+)*$/);
     let input = String(entrada.value);
     return !regexp.test(input) ? 
-        alert('Tu entrada no debe contener mayusculas ni Caracteres especiales') :  
+        alert('Tu texto no debe contener Mayusculas ni Caracteres especiales') :  
             input; 
 };
 

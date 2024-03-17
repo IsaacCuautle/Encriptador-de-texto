@@ -1,4 +1,4 @@
-:root{
+:root {
     --dark-blue-100: #609ED4;
     --dark-blue-200: #356EA9;
     --dark-blue-300: #0A3871;
@@ -18,7 +18,7 @@
     --gris-500: #343A40;
 }
 
-html{
+html {
     font-size: 1.5em;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -28,11 +28,11 @@ html{
     background-color: #E9ECF8;
 }
 
-p{
+p {
     color: var(--dark-blue-500);
 }
 
-textarea{
+textarea {
     border: none;
     overflow: auto;
     outline: none;
@@ -42,12 +42,12 @@ textarea{
     resize: none;
 }
 
-.logo{
+.logo {
     width: 2%;
     margin: 0 1em;
 }
 
-.cifrar{
+.cifrar {
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -57,14 +57,14 @@ textarea{
     top: 3em;
 }
 
-.botones{
+.botones {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
 }
 
-.botones i{
+.botones i {
     position: absolute;
     font-size: .5em;
     left: 9em;
@@ -72,18 +72,17 @@ textarea{
     color: #495057;
 }
 
-.boton{
+.boton {
     margin: 1em 6em;
     width: 100%;
     transition: 500ms;
 }
 
-.boton:hover{
+.boton:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
-
 }
 
-.cifrar .boton{
+.cifrar .boton {
     border-radius: 1em;
     padding: 1% 3%;
     border-style: none;
@@ -93,9 +92,9 @@ textarea{
 }
 
 
-.cifrar .boton-desencriptar{
-   background-color: #CED4DA; 
-   color: #052051;
+.cifrar .boton-desencriptar {
+    background-color: #CED4DA;
+    color: #052051;
 }
 
 #entrada-cifrar {
@@ -111,18 +110,18 @@ textarea{
     margin-bottom: 2.4%;
 }
 
-#entrada-cifrar::placeholder{
+#entrada-cifrar::placeholder {
     color: var(--dark-blue500);
 }
 
-#entrada-cifrar:focus{
+#entrada-cifrar:focus {
     border: none;
     color: var(--dark-blue-400);
     text-align: left;
 
 }
 
-.salida{
+.salida {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -134,23 +133,23 @@ textarea{
     border-radius: .5em;
     border-width: .1em;
     align-items: center;
-    -webkit-box-shadow: -3px 4px 30px -8px rgba(0,0,0,0.75);
-    -moz-box-shadow: -3px 4px 30px -8px rgba(0,0,0,0.75);
-    box-shadow: -3px 4px 30px -8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -3px 4px 30px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -3px 4px 30px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: -3px 4px 30px -8px rgba(0, 0, 0, 0.75);
 }
 
-.muneco{
+.muneco {
     position: absolute;
 }
 
 
-.img-muneco{
+.img-muneco {
     position: relative;
     top: 1em;
     height: 50%;
 }
 
-.muneco p{
+.muneco p {
     position: absolute;
     text-align: center;
     font-weight: bold;
@@ -159,7 +158,7 @@ textarea{
     margin: 0 2em;
 }
 
-.muneco p:last-of-type{
+.muneco p:last-of-type {
     position: absolute;
     bottom: -9em;
     color: #868E96;
@@ -168,20 +167,22 @@ textarea{
 }
 
 
-.salida .boton {    
+.salida .boton {
     display: none;
     width: 75%;
     padding: 3%;
     border-radius: 1em;
     border-style: none;
-    background-color: #CED4DA; 
-   color: #052051;
+    background-color: #CED4DA;
+    color: #052051;
     font-family: "Inter", sans-serif;
     font-size: 15px;
     font-weight: bold;
 }
-#entrada-descifrar{
-    resize: none; /*remove the resize handle on the bottom right*/
+
+#entrada-descifrar {
+    resize: none;
+    /*remove the resize handle on the bottom right*/
     width: 95%;
     background-color: #F3F5FC;
     padding: 40% 0;
@@ -191,40 +192,106 @@ textarea{
     /* border-style: solid;  */
 }
 
-#entrada-descifrar::placeholder{
+#entrada-descifrar::placeholder {
     color: var(--dark-blue500);
 }
 
-footer{
+footer {
     display: block;
     font-size: .6em;
+    font-weight: bold;
     margin: 6em 0 0;
     text-align: center;
     width: 100%;
     height: 50%;
+    border-top: 2px solid #CED4DA;
+    
 }
 
 
 @media (max-width: 940px) {
-    .logo{
+    .logo {
         position: relative;
         width: 1.2em;
         margin: .1em;
     }
 
-    .cifrar{
+    .cifrar {
         position: absolute;
-        margin: 0 auto;
         width: 90%;
-        height: 30%;
-        border-style: dashed;
+        height: 50%;
+        /* border-style: dashed; */
     }
 
-    .muneco{
-        position: fixed;
+    .botones i {
+        position: absolute;
+        bottom: 4.5em;
+        width: 100%;
+        left: 2em;
     }
 
-    .muneco .img-muneco{
+    .botones {
+        position: relative;
+        width: 100%;
+    }
+
+
+    .cifrar .boton {
+        padding: .3em 2em;
+        position: relative;
+        width: 80%;
+        margin: .5em 1em;
+    }
+
+    .salida {
+        position: fixed;    
+        width: 90%;
+        height: 35%;
+        top: 62%;
+        margin: auto -2em;
+    }
+
+    #entrada-descifrar{
+        margin: 0 auto;
+        padding: 15% 0%;
+        overflow: hidden;
+    }
+
+    #entrada-descifrar p{
+        text-align: center;
+    }
+
+    .muneco {
+        position: absolute;
+        display: block;
+        /* height: 10%; */
+        width: 100%;
+        height: 20%;
+    }
+
+    .muneco p{
+        position: relative;
+        text-align: center;
+    } 
+
+    .muneco p:last-of-type{
+        position: relative;
+        top: 2em;
+        margin: 0 auto;
+    }
+
+    .muneco .img-muneco {
         display: none;
     }
+
+    .salida .boton{
+        position: fixed;
+        padding: .8em;
+        bottom: 1.5em;
+    }
+
+    footer {
+        display: none;
+    }
+    
 }
