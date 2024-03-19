@@ -1,6 +1,6 @@
 <h1>Encriptador de textos</h1>
 <p>
-Aquí está el código para el encriptador de textos del Challenge ONE, como parte del programa Alura ONE (Oracle Next Education). Este encriptador y desencriptador de textos es una herramienta modesta diseñada con HTML/CSS y programada con JavaScript. Puede ser ejecutado en cualquier dispositivo ya que funciona en el navegador web preferido del usuario y cuenta con un diseño responsivo que se adapta a diferentes tamaños de pantalla.
+Aquí se exhibe un encriptador/desencriptador de texto del Challenge ONE, como parte del programa Alura ONE (Oracle Next Education). Esta herramienta, desarrollada con HTML/CSS y programada en JavaScript, ofrece una solución modesta pero efectiva. Su compatibilidad con distintos dispositivos permite su ejecución en el navegador web favorito del usuario, además de contar con un diseño responsivo que se ajusta a diferentes tamaños de pantalla.
 </p>
 
 <h2>Imagenes</h2>
